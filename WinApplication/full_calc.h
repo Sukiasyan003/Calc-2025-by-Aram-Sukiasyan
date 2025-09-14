@@ -76,6 +76,22 @@ namespace WinApplication {
 	private: System::Windows::Forms::Button^ clear;
 
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ num1;
+	private: System::Windows::Forms::TextBox^ con_number;
+	private: System::Windows::Forms::ComboBox^ value1;
+	private: System::Windows::Forms::ComboBox^ value2;
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ button_convert;
+
 
 	private:
 		/// <summary>
@@ -90,6 +106,7 @@ namespace WinApplication {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(full_calc::typeid));
 			this->resbox = (gcnew System::Windows::Forms::TextBox());
 			this->one = (gcnew System::Windows::Forms::Button());
 			this->two = (gcnew System::Windows::Forms::Button());
@@ -109,6 +126,15 @@ namespace WinApplication {
 			this->b_div = (gcnew System::Windows::Forms::Button());
 			this->clear = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->num1 = (gcnew System::Windows::Forms::TextBox());
+			this->con_number = (gcnew System::Windows::Forms::TextBox());
+			this->value1 = (gcnew System::Windows::Forms::ComboBox());
+			this->value2 = (gcnew System::Windows::Forms::ComboBox());
+			this->button_convert = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// resbox
@@ -335,11 +361,109 @@ namespace WinApplication {
 			this->label1->TabIndex = 18;
 			this->label1->Text = L"Калькулятор 2025";
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe Print", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(333, 13);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(289, 33);
+			this->label2->TabIndex = 19;
+			this->label2->Text = L"Конвертер C -> F / F -> C";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(411, 76);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(81, 13);
+			this->label3->TabIndex = 20;
+			this->label3->Text = L"Введите число";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(411, 152);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(101, 13);
+			this->label4->TabIndex = 21;
+			this->label4->Text = L"Выберите единицу";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(411, 218);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(101, 13);
+			this->label5->TabIndex = 22;
+			this->label5->Text = L"Выберите единицу";
+			// 
+			// num1
+			// 
+			this->num1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->num1->Location = System::Drawing::Point(394, 92);
+			this->num1->Name = L"num1";
+			this->num1->Size = System::Drawing::Size(174, 31);
+			this->num1->TabIndex = 23;
+			// 
+			// con_number
+			// 
+			this->con_number->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->con_number->Location = System::Drawing::Point(394, 340);
+			this->con_number->Name = L"con_number";
+			this->con_number->Size = System::Drawing::Size(174, 31);
+			this->con_number->TabIndex = 24;
+			// 
+			// value1
+			// 
+			this->value1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->value1->FormattingEnabled = true;
+			this->value1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Цельсия", L"Фаренгейт" });
+			this->value1->Location = System::Drawing::Point(394, 168);
+			this->value1->Name = L"value1";
+			this->value1->Size = System::Drawing::Size(174, 33);
+			this->value1->TabIndex = 25;
+			this->value1->SelectedIndexChanged += gcnew System::EventHandler(this, &full_calc::value1_SelectedIndexChanged);
+			// 
+			// value2
+			// 
+			this->value2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->value2->FormattingEnabled = true;
+			this->value2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Цельсия", L"Фаренгейт" });
+			this->value2->Location = System::Drawing::Point(394, 234);
+			this->value2->Name = L"value2";
+			this->value2->Size = System::Drawing::Size(174, 33);
+			this->value2->TabIndex = 26;
+			// 
+			// button_convert
+			// 
+			this->button_convert->Location = System::Drawing::Point(456, 273);
+			this->button_convert->Name = L"button_convert";
+			this->button_convert->Size = System::Drawing::Size(112, 23);
+			this->button_convert->TabIndex = 27;
+			this->button_convert->Text = L"Конвертировать";
+			this->button_convert->UseVisualStyleBackColor = true;
+			this->button_convert->Click += gcnew System::EventHandler(this, &full_calc::button_convert_Click);
+			// 
 			// full_calc
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(334, 411);
+			this->ClientSize = System::Drawing::Size(634, 411);
+			this->Controls->Add(this->button_convert);
+			this->Controls->Add(this->value2);
+			this->Controls->Add(this->value1);
+			this->Controls->Add(this->con_number);
+			this->Controls->Add(this->num1);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->clear);
 			this->Controls->Add(this->b_div);
@@ -359,12 +483,13 @@ namespace WinApplication {
 			this->Controls->Add(this->two);
 			this->Controls->Add(this->one);
 			this->Controls->Add(this->resbox);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(350, 450);
-			this->MinimumSize = System::Drawing::Size(350, 450);
+			this->MaximumSize = System::Drawing::Size(650, 450);
+			this->MinimumSize = System::Drawing::Size(650, 450);
 			this->Name = L"full_calc";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Калькулятор";
+			this->Text = L"Калькулятор улучшенная";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -373,6 +498,9 @@ namespace WinApplication {
 		String^ a = "";
 		String^ operation = "";
 		String^ b = "";
+		double number = 0;
+		double cel_value = 1.8;
+		double far_value = 32;
 		double done = 0;
 	private: System::Void clear_Click(System::Object^ sender, System::EventArgs^ e) {
 		resbox->Text = "";
@@ -575,6 +703,35 @@ private: System::Void null_Click(System::Object^ sender, System::EventArgs^ e) {
 		resbox->Text = done.ToString();
 		operation = "";
 		b = "";
+	} 
+	private: System::Void button_convert_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (num1->Text == "") {
+			MessageBox::Show("Не вводено число !", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		} 
+		if (!value1->SelectedItem) {
+			MessageBox::Show("Не выбрано единицу !", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
-	};
+		if (value1->SelectedIndex == 0) {
+			number = Convert::ToDouble(num1->Text, Globalization::CultureInfo::InvariantCulture);
+			number *= cel_value;
+			number += far_value;
+			con_number->Text = number.ToString();
+		}
+		if (value1->SelectedIndex == 1) {
+			number = Convert::ToDouble(num1->Text, Globalization::CultureInfo::InvariantCulture);
+			number -= far_value;
+			number /= cel_value;
+			con_number->Text = number.ToString();
+		}
+	}
+private: System::Void value1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (value1->SelectedItem == "Цельсия") {
+		value2->SelectedIndex = 1;
+		}
+	else {
+		value1->SelectedIndex = 1;
+			value2->SelectedIndex = 0;
+	}
+}
+};
 }
