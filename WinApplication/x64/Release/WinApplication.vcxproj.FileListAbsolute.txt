@@ -1,0 +1,3 @@
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Release\WinApplication.vcxproj.AssemblyReference.cache
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Release\WinApplication.vcxproj.GenerateResource.cache
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Release\WinApplication.full_calc.resources

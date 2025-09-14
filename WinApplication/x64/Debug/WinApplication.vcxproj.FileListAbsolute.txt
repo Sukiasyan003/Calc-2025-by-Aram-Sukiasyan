@@ -1,0 +1,3 @@
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Debug\WinApplication.vcxproj.AssemblyReference.cache
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Debug\WinApplication.Converter.resources
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\x64\Debug\WinApplication.vcxproj.GenerateResource.cache

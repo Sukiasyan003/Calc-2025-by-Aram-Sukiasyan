@@ -1,0 +1,15 @@
+﻿  Converter.cpp
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\Converter.h(214,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "Converter.cpp")
+  
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\Converter.h(215,19): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "Converter.cpp")
+  
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\Converter.h(220,19): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "Converter.cpp")
+  
+C:\Users\Aram Sukiasyan\source\repos\WinApplication\WinApplication\Converter.h(222,20): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "Converter.cpp")
+  
+  Converter.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  WinApplication.vcxproj -> C:\Users\Aram Sukiasyan\source\repos\WinApplication\x64\Debug\WinApplication.exe
