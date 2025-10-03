@@ -1,4 +1,17 @@
-  WinApplication.full_calc.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Button_Speed_Game.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.EasyCalc.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Game_random.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Generator_pass.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.HappyWelcome.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Market_house.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.math_game.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.math_game_result.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Note.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Notepad_mini.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Note_Data.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Summa.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.window.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.XO.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly WinApplication, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
 	hash=SHA1, flags=PublicKey
@@ -14,6 +27,45 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class WinApplication.full_calc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class WinApplication.Button_Speed_Game: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.EasyCalc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Game_random: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Generator_pass: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.HappyWelcome: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Market_house: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.math_game_result: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.math_game: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Note: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Notepad_mini: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Note_Data: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Summa: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.window: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.XO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
