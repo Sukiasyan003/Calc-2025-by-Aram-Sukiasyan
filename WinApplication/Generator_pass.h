@@ -92,6 +92,7 @@ namespace WinApplication {
 	private: System::Windows::Forms::Label^ label24;
 	private: System::Windows::Forms::Label^ label25;
 	private: System::Windows::Forms::Label^ label26;
+	private: System::Windows::Forms::TextBox^ xarnurd;
 
 
 	private:
@@ -161,6 +162,7 @@ namespace WinApplication {
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->xarnurd = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -861,6 +863,13 @@ namespace WinApplication {
 			this->label26->TabIndex = 42;
 			this->label26->Text = L"(Քառ․ փակագիծ)";
 			// 
+			// xarnurd
+			// 
+			this->xarnurd->Location = System::Drawing::Point(165, 85);
+			this->xarnurd->Name = L"xarnurd";
+			this->xarnurd->Size = System::Drawing::Size(100, 20);
+			this->xarnurd->TabIndex = 53;
+			// 
 			// Generator_pass
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -921,6 +930,7 @@ namespace WinApplication {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->label1);
+			this->Controls->Add(this->xarnurd);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimumSize = System::Drawing::Size(350, 500);
@@ -985,26 +995,49 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 		// Progress generate
 	if (noproblem) {
 		//generate easy
+		String^ tiv3;
 		if (combolevel->SelectedIndex == 0) { // Հեշտ
 			for (int j = 0; j < 3; j++) {
 					int tiv = randans->Next(0, 10);
-					ln += tiv;
+					tiv3 += tiv;
 				}
 				ln += user_text->Text;
+				String^ line5;
 				for (int j = 0; j < 5; j++) {
 					int line1 = randans->Next(0, 25);
 					for (int i = 0; i < lines->Length; i++) {
 						if (i == line1) {
-							ln += lines[i];
+							line5 += lines[i];
 							//1break;
 						}
 					}
-				} passbox->Text = ""; passbox->Text = ln; ln = "";
+				} int xarn = randans->Next(1, 4);
+				if (xarn == 1) {
+					String^ xarn1 = tiv3 += user_text->Text;
+					String^ xarn1_1 = xarn1 += line5;
+					ln = xarn1_1;
+				}
+				if (xarn == 2)  {
+					String^ xarn1 = user_text->Text + tiv3;
+					String^ xarn1_1 = xarn1 += line5;
+					ln = xarn1_1;
+				}
+				if (xarn == 3) {
+					String^ xarn1 = line5 += user_text->Text;
+					String^ xarn1_1 = xarn1 += tiv3;
+					ln = xarn1_1;
+				}
+				
+				passbox->Text = ""; passbox->Text = ln;ln = ""; xarnurd->Text = xarn.ToString(); 
 			//passbox->Text = countboxes.ToString(); 
 			}
 		//generate middle
 		if (combolevel->SelectedIndex == 1) { // Միջին
-
+			String^ linexarn5;
+			String^ simbolxarn2;
+			String^ step1;
+			String^ step2;
+			String^ step3;
 			int countmij = 0;
 			for each(CheckBox ^ check in checkboxes) {
 				if (check->Checked) {
@@ -1016,7 +1049,7 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 					int simbols1 = randans->Next(0, countmij);
 					for (int i = 0; i < simbol->Length; i++) {
 						if (i == simbols1) {
-							ln += simbol[i];
+							simbolxarn2 += simbol[i];
 							//break;
 						}
 					}
@@ -1025,21 +1058,58 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 					int line1 = randans->Next(0, 25);
 					for (int i = 0; i < lines->Length; i++) {
 						if (i == line1) {
-							ln += lines[i];
+							linexarn5 += lines[i];
 							//break;
 						}
 					}
 				}
 				ln += user_text->Text;
+				int tiv;
+				String^ tver;
 				for (int j = 0; j < 3; j++) {
-					int tiv = randans->Next(0, 10);
-					ln += tiv;
-				} passbox->Text = ln; simbol = ""; ln = "";
+					tiv = randans->Next(0, 10);
+					tver += tiv;
+				} 
+				int xarn = randans->Next(1, 5);
+				if (xarn == 1) {
+					step1 = simbolxarn2 += user_text->Text;
+					step2 = step1 += linexarn5;
+					step3 = step2 += tver;
+					ln = step3;
+				}
+				if (xarn == 2) {
+					step1 = user_text->Text + simbolxarn2;
+					step2 = step1 += tver;
+					step3 = step2 += linexarn5;
+					ln = step3;
+				}
+				if (xarn == 3) {
+					step1 = linexarn5 += simbolxarn2;
+					step2 = step1 += user_text->Text;
+					step3 = step2 += tver;
+					ln = step3;
+				}
+				if (xarn == 4) {
+					step1 = tver += simbolxarn2;
+					step2 = step1 += user_text->Text;
+					step3 = step2 += linexarn5;
+					ln = step3;
+				}
+				passbox->Text = ln; simbol = ""; ln = ""; //xarnurd->Text = xarn.ToString(); 
 			//passbox->Text = countboxes.ToString(); 
 			}
 		//generate hard
 		if (combolevel->SelectedIndex == 2) { // Դժվար
 			int countdjv = 0;
+				String^ step1;
+				String^ step2;
+				String^ step3;
+				String^ step4;
+				String^ step5;
+				String^ tver;
+				String^ simbolxarn4;
+				String^ linexarn4;
+				int tiv5;
 			for each (CheckBox ^ check in checkboxes) {
 				if (check->Checked) {
 					simbol += (check->Text);
@@ -1048,13 +1118,13 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 			}
 			for (int j = 0; j < 5; j++) {
 				int tiv = randans->Next(0, 10);
-				ln += tiv;
+				tver += tiv;
 			}
 			for (int j = 0; j < 4; j++) {
 				int simbols1 = randans->Next(0, countdjv);
 				for (int i = 0; i < simbol->Length; i++) {
 					if (i == simbols1) {
-						ln += simbol[i];
+						simbolxarn4 += simbol[i];
 						//break;
 					}
 				}
@@ -1064,16 +1134,51 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 				int line1 = randans->Next(0, 25);
 				for (int i = 0; i < lines->Length; i++) {
 					if (i == line1) {
-						ln += lines[i];
+						linexarn4 += lines[i];
 						//break;
 					}
 				}
-			} passbox->Text = ln; simbol = ""; ln = "";
+			} 
+			int xarn = randans->Next(1, 5);
+			if (xarn == 1) {
+				step1 = linexarn4 += tver;
+				step2 = step1 += simbolxarn4;
+				step3 = step2 += user_text->Text;
+				ln = step3;
+			}
+			if (xarn == 2) {
+				step1 = tver += user_text->Text;
+				step2 = step1 += linexarn4;
+				step3 = step2 += simbolxarn4;
+				ln = step3;
+			}
+			if (xarn == 3) {
+				step1 = user_text->Text + tver;
+				step2 = step1 += simbolxarn4;
+				step3 = step2 += linexarn4;
+				ln = step3;
+			}
+			if (xarn == 4) {
+				step1 = simbolxarn4 += linexarn4;
+				step2 = step1 += user_text->Text;
+				step3 = step2 += tver;
+				ln = step3;
+			}
+			passbox->Text = ln; simbol = ""; ln = ""; //xarnurd->Text = xarn.ToString();  
 			//passbox->Text = countboxes.ToString();
 		}
 		//generate very hard
 		if (combolevel->SelectedIndex == 3) { // Անկոտրելի
-
+			String^ step1;
+			String^ step2;
+			String^ step3;
+			String^ step4;
+			String^ step5;
+			String^ tver;
+			String^ simbolxarn6;
+			String^ simbolxarn3;
+			String^ linexarn5;
+			int tiv5;
 			int countank = 0;
 			for each (CheckBox ^ check in checkboxes) {
 				if (check->Checked) {
@@ -1081,11 +1186,12 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 					countank++;
 				}
 			}
+
 			for (int j = 0; j < 6; j++) {
 				int simbols1 = randans->Next(0, countank);
 				for (int i = 0; i < simbol->Length; i++) {
 					if (i == simbols1) {
-						ln += simbol[i];
+						simbolxarn6 += simbol[i];
 						//break;
 					}
 				}
@@ -1094,7 +1200,7 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 				int line1 = randans->Next(0, 25);
 				for (int i = 0; i < lines->Length; i++) {
 					if (i == line1) {
-						ln += lines[i];
+						linexarn5 += lines[i];
 						//break;
 					}
 				}
@@ -1102,17 +1208,55 @@ private: System::Void buttongenerate_Click(System::Object^ sender, System::Event
 			ln += user_text->Text;
 			for (int j = 0; j < 4; j++) {
 				int tiv = randans->Next(0, 10);
-				ln += tiv;
+				tver += tiv;
 			}
 			for (int j = 0; j < 3; j++) {
 				int simbols2 = randans->Next(0, countank);
 				for (int i = 0; i < simbol->Length; i++) {
 					if (i == simbols2) {
-						ln += simbol[i];
+						simbolxarn3 += simbol[i];
 						//break;
 					}
 				}
-			} passbox->Text = ln; simbol = ""; ln = ""; 
+			} 
+			int xarn = randans->Next(1, 6);
+			if (xarn == 1) {
+				step1 = tver += simbolxarn6;
+				step2 = step1 += linexarn5;
+				step3 = step2 += user_text->Text;
+				step4 = step3 += simbolxarn3;
+				ln = step4;
+			}
+			if (xarn == 2) {
+				step1 = linexarn5 += tver;
+				step2 = step1 += simbolxarn3;
+				step3 = step2 += user_text->Text;
+				step4 = step3 += simbolxarn6;
+				ln = step4;
+			}
+			if (xarn == 3) {
+				step1 = linexarn5 += simbolxarn3;
+				step2 = step1 += simbolxarn6;
+				step3 = step2 += tver;
+				step4 = step3 += user_text->Text;
+				ln = step4;
+			}
+			if (xarn == 4) {
+				step1 = simbolxarn6 += tver;
+				step2 = step1 += linexarn5;
+				step3 = step2 += user_text->Text;
+				step4 = step3 += simbolxarn3;
+				ln = step4;
+			}
+			if (xarn == 5) {
+				step1 = user_text->Text + simbolxarn6;
+				step2 = step1 += linexarn5;
+				step3 = step2 += tver;
+				step4 = step3 += simbolxarn3;
+				step5 = step4;
+				ln = step5;
+			}
+			passbox->Text = ln; simbol = ""; ln = ""; //xarnurd->Text = xarn.ToString();
 			//passbox->Text = countboxes.ToString();
 		} 
 	}
