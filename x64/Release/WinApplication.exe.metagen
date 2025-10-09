@@ -1,4 +1,6 @@
+  WinApplication.AverageSum.resources - Embedded, ContainedInManifestFile, 
   WinApplication.Button_Speed_Game.resources - Embedded, ContainedInManifestFile, 
+  WinApplication.Converter_Valute.resources - Embedded, ContainedInManifestFile, 
   WinApplication.EasyCalc.resources - Embedded, ContainedInManifestFile, 
   WinApplication.Game_random.resources - Embedded, ContainedInManifestFile, 
   WinApplication.Generator_pass.resources - Embedded, ContainedInManifestFile, 
@@ -27,7 +29,13 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class WinApplication.AverageSum: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class WinApplication.Button_Speed_Game: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Converter_Valute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class WinApplication.EasyCalc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -40,6 +48,9 @@ Class WinApplication.Generator_pass: AutoLayout, AnsiClass, Class, Public, Befor
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class WinApplication.HappyWelcome: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class WinApplication.Hashvi_nsti: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class WinApplication.Market_house: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
